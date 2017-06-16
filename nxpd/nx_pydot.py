@@ -466,6 +466,8 @@ def draw_pydot(G, filename=None, format=None, prefix=None, suffix=None,
         if show == 'ipynb':
             from IPython.core.display import Image
             return Image(filename=fname, embed=True)
+        elif show == "link":
+            return fname
         else:
             default_opener(fname)
             if sys.platform == 'linux2':
